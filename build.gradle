@@ -119,17 +119,10 @@ configurations {
 }
 
 dependencies {
-    // compileOnly: we only need SBP/Core's classes to compile against. At runtime,
-    // the actual jars already sitting in your instance's mods folder provide them -
-    // do NOT add these as localRuntime/implementation or you'll bundle duplicate copies.
-    // Swap in the exact version string matching what's in your modpack (check the
-    // Modrinth page for sophisticated-backpacks / sophisticated-core, 1.21.1 NeoForge).
-    compileOnly "maven.modrinth:sophisticated-backpacks:REPLACE_WITH_YOUR_VERSION"
-    compileOnly "maven.modrinth:sophisticated-core:REPLACE_WITH_YOUR_VERSION"
-    // localRuntime: so `gradlew runClient`/`runServer` actually have SBP/Core loaded
-    // for testing, without publishing a hard runtime dependency on them.
-    localRuntime "maven.modrinth:sophisticated-backpacks:REPLACE_WITH_YOUR_VERSION"
-    localRuntime "maven.modrinth:sophisticated-core:REPLACE_WITH_YOUR_VERSION"
+    compileOnly "maven.modrinth:sophisticated-backpacks:3.25.71"
+    compileOnly "maven.modrinth:sophisticated-core:1.4.77"
+    localRuntime "maven.modrinth:sophisticated-backpacks:3.25.71"
+    localRuntime "maven.modrinth:sophisticated-core:1.4.77"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
