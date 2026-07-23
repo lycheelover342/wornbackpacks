@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.wornbackpacks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BackpackOpenPayloadMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
